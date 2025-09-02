@@ -13,6 +13,8 @@
 	--color-border-light: #f1f1f1;
 	--color-overlay: rgba(0, 0, 0, 0.3);
 	--color-title: #19202c;
+	--color-video-title: #192646;
+	
 
 	/* Spacing */
 	--spacing-xs: 4px;
@@ -86,4 +88,5 @@ img {
 h2 {
 	font-weight: bold;
 	font-size: var(--font-size-xl);
-	color: var
+	color: var(--color-title);
+}

@@ -1,7 +1,7 @@
 /* Desktop Navbar BEM Styles */
 .desktop-navbar {
 	display: flex;
-	padding: 20px 32px;
+	padding: var(--spacing-lg) var(--spacing-xl);
 	align-items: center;
 	justify-content: space-between;
 }
@@ -58,7 +58,7 @@
 }
 
 .desktop-navbar__right button {
-	padding: 0 8px;
+	padding: 0 var(--spacing-sm);
 }
 
 .desktop-navbar__icon {
