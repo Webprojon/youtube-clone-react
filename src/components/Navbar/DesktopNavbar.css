@@ -1,0 +1,116 @@
+/* Desktop Navbar BEM Styles */
+.desktop-navbar {
+	display: flex;
+	padding: 20px 32px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.desktop-navbar__left {
+	display: flex;
+	align-items: center;
+}
+
+.desktop-navbar__menu-btn {
+	width: 20px;
+	height: 17px;
+}
+
+.desktop-navbar__logo {
+	width: 116px;
+	height: 25px;
+	margin: 0 52px 0 25px;
+}
+
+.desktop-navbar__search-form {
+	display: flex;
+	align-items: center;
+	width: 830px;
+	height: 44px;
+	border-radius: var(--radius-xl);
+	background: var(--color-input-bg);
+}
+
+.desktop-navbar__search-input {
+	flex: 1;
+	border: none;
+	outline: none;
+	font-size: var(--font-size-base);
+	padding: 12px 23px;
+	background: transparent;
+	color: var(--color-text-light);
+}
+
+.desktop-navbar__search-input::placeholder {
+	color: var(--color-text-light);
+}
+
+.desktop-navbar__search-btn {
+	width: 18.21px;
+	height: 18.21px;
+	margin-right: 13px;
+}
+
+.desktop-navbar__right {
+	gap: 29px;
+	display: flex;
+	align-items: center;
+}
+
+.desktop-navbar__right button {
+	padding: 0 8px;
+}
+
+.desktop-navbar__icon {
+	width: 27px;
+	height: 20px;
+}
+
+.desktop-navbar__notifications-btn {
+	position: relative;
+}
+
+.desktop-navbar__notification-count {
+	position: absolute;
+	top: -8px;
+	right: 5px;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-bg);
+	background: var(--color-red);
+}
+
+.desktop-navbar__avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+/* Desktop Responsive Design */
+@media (max-width: 1200px) {
+	.desktop-navbar__right {
+		gap: 12px;
+	}
+
+	.desktop-navbar__search-form {
+		width: 520px;
+	}
+}
+
+@media (max-width: 900px) {
+	.desktop-navbar__search-form {
+		width: 300px;
+	}
+}
+
+@media (max-width: 700px) {
+	.desktop-navbar {
+		display: none;
+	}
+}
