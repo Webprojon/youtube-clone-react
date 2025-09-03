@@ -1,42 +1,35 @@
-import "./MobileNavbar.css";
-
-import { searchIcon, threeDotsIcon, homeIcon, trendingIcon, subscriptionsIcon, libraryIcon, logo } from "../../assets";
+import styles from "./MobileNavbar.module.css";
+import { searchIcon, threeDotsIcon } from "../../assets";
+import { Logo, IconButton, NavigationItem, NavbarContainer } from "../shared";
+import { useNavigation } from "../../hooks/useNavigation";
+import { NAVIGATION_ITEMS } from "../../constants/constants";
 
 export default function MobileNavbar() {
+	const { isActive, handleNavigation } = useNavigation("home");
+
 	return (
 		<header>
-			<section className="mobile-navbar">
-				<a href="/home.html" aria-label="YouTube Home">
-					<img className="mobile-navbar__logo" src={logo} alt="YouTube Logo" />
-				</a>
-				<div className="mobile-navbar__right">
-					<button aria-label="Search">
-						<img className="mobile-navbar__search-icon" src={searchIcon} alt="search icon" />
-					</button>
-					<button aria-label="Three dots">
-						<img className="mobile-navbar__three-dots" src={threeDotsIcon} alt="Three dots" />
-					</button>
+			<NavbarContainer variant="mobile" className={styles.mobileNavbar}>
+				<Logo className={styles.mobileNavbarLogo} />
+				<div className={styles.mobileNavbarRight}>
+					<IconButton icon={searchIcon} alt="search icon" ariaLabel="Search" className={styles.mobileNavbarSearchIcon} />
+					<IconButton icon={threeDotsIcon} alt="Three dots" ariaLabel="Three dots" className={styles.mobileNavbarThreeDots} />
 				</div>
-			</section>
+			</NavbarContainer>
 
 			{/* Mobile Navigation Bar */}
-			<nav className="mobile-nav">
-				<a className="mobile-nav__item mobile-nav__item--active" href="#home">
-					<img src={homeIcon} alt="home" />
-					Home
-				</a>
-				<a className="mobile-nav__item" href="#trending">
-					<img src={trendingIcon} alt="trending" />
-					Trending
-				</a>
-				<a className="mobile-nav__item" href="#subscriptions">
-					<img src={subscriptionsIcon} alt="subscriptions" />
-					Subscriptions
-				</a>
-				<a className="mobile-nav__item" href="#library">
-					<img src={libraryIcon} alt="library" />
-					Library
-				</a>
+			<nav className={styles.mobileNav}>
+				{NAVIGATION_ITEMS.map((item) => (
+					<NavigationItem
+						key={item.id}
+						icon={item.icon}
+						label={item.label}
+						href={item.href}
+						isActive={isActive(item.id)}
+						onClick={() => handleNavigation(item.id)}
+						className={styles.mobileNavItem}
+					/>
+				))}
 			</nav>
 		</header>
 	);
