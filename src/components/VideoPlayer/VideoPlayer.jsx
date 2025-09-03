@@ -4,6 +4,14 @@ import likeIcon from "../../assets/icons/like-icon.svg";
 import dislikeIcon from "../../assets/icons/dislike-icon.svg";
 import shareIcon from "../../assets/icons/share-icon.svg";
 import moreIcon from "../../assets/icons/more-icon.svg";
+import pauseIcon from "../../assets/icons/pause-icon.png";
+import nextIcon from "../../assets/icons/next-icon.png";
+import volumeIcon from "../../assets/icons/volume-icon.png";
+import volumeIcon2 from "../../assets/icons/volume.svg";
+import ccIcon from "../../assets/icons/subtitles-icon.png";
+import settingsIcon from "../../assets/icons/settings-icon.png";
+import sizeIcon from "../../assets/icons/size-icon.png";
+import fullscreenIcon from "../../assets/icons/full-screen-icon.png";
 
 export default function VideoPlayer() {
 	return (
@@ -14,71 +22,65 @@ export default function VideoPlayer() {
 					<img src={videoCover} alt="Video thumbnail" />
 				</div>
 
-				{/* Video Controls Overlay */}
+				{/* Desktop Video Controls Overlay */}
 				<div className="video-player__controls">
 					{/* Time Display */}
 					<div className="video-player__time-display">
-						<span className="video-player__time">1:34</span>
-						<span className="video-player__time">19:00</span>
+						<span>1:34</span>
+						<span>19:00</span>
 					</div>
 
 					{/* Progress Bar */}
-					<div className="video-player__progress-container">
-						<div className="video-player__progress-bar">
-							<div className="video-player__progress-fill"></div>
-						</div>
+					<div className="video-player__progress-bar">
+						<div className="video-player__progress-fill"></div>
 					</div>
 
 					{/* Bottom Controls */}
 					<div className="video-player__bottom-controls">
 						{/* Left Controls */}
 						<div className="video-player__left-controls">
-							{/* Pause Button */}
 							<button className="video-player__pause-btn" aria-label="Pause">
-								<span style={{ fontSize: "20px", color: "white" }}>⏸</span>
+								<img src={pauseIcon} alt="Pause" />
 							</button>
-
-							{/* Skip Forward Button */}
 							<button className="video-player__next-btn" aria-label="Skip Forward">
-								<span style={{ fontSize: "18px", color: "white" }}>⏭</span>
+								<img src={nextIcon} alt="Next" />
 							</button>
-
-							{/* Volume Control */}
-							<div className="video-player__volume-control">
-								<button className="video-player__volume-btn" aria-label="Volume">
-									<span style={{ fontSize: "20px", color: "white" }}>🔊</span>
-								</button>
-								<div className="video-player__volume-slider">
-									<div className="video-player__volume-track">
-										<div className="video-player__volume-fill"></div>
-									</div>
-								</div>
-							</div>
+							<button className="video-player__volume-btn" aria-label="Volume">
+								<img src={volumeIcon} alt="Volume" />
+							</button>
 						</div>
 
 						{/* Right Controls */}
 						<div className="video-player__right-controls">
-							{/* Closed Captions Button */}
 							<button className="video-player__subtitles-btn" aria-label="Closed Captions">
-								<span style={{ fontSize: "16px", color: "white", fontWeight: "bold" }}>CC</span>
+								<img src={ccIcon} alt="Closed Captions" />
 							</button>
-
-							{/* Settings Button */}
 							<button className="video-player__settings-btn" aria-label="Settings">
-								<span style={{ fontSize: "18px", color: "white" }}>⚙️</span>
+								<img src={settingsIcon} alt="Settings" />
 							</button>
-
-							{/* Picture-in-Picture Button */}
 							<button className="video-player__size-btn" aria-label="Picture-in-Picture">
-								<span style={{ fontSize: "18px", color: "white" }}>⛶</span>
+								<img src={sizeIcon} alt="Size" />
 							</button>
-
-							{/* Full Screen Button */}
 							<button className="video-player__fullscreen-btn" aria-label="Full Screen">
-								<span style={{ fontSize: "18px", color: "white" }}>⛶</span>
+								<img src={fullscreenIcon} alt="Full Screen" />
 							</button>
 						</div>
 					</div>
+				</div>
+
+				{/* Mobile Video Controls Overlay */}
+				<div className="video-player__mobile-controls">
+					<button className="video-player__mobile-btn" aria-label="Pause">
+						<img src={pauseIcon} alt="Pause" />
+					</button>
+					<span>1:34</span>
+					<div className="video-player__mobile-progress-bar">
+						<div className="video-player__mobile-progress-fill"></div>
+					</div>
+					<span>-10:00</span>
+					<button className="video-player__mobile-btn" aria-label="Volume">
+						<img src={volumeIcon2} alt="Volume" />
+					</button>
 				</div>
 			</div>
 
@@ -91,25 +93,19 @@ export default function VideoPlayer() {
 
 				{/* Action Buttons */}
 				<div className="video-actions">
-					<button className="video-action-btn video-action-btn--like">
-						<div className="video-action-btn__icon">
-							<img src={likeIcon} alt="Like" />
-						</div>
+					<button className="video-action-btn">
+						<img src={likeIcon} alt="Like" />
 						<span className="video-action-btn__text">123k</span>
 					</button>
 
-					<button className="video-action-btn video-action-btn--dislike">
-						<div className="video-action-btn__icon">
-							<img src={dislikeIcon} alt="Dislike" />
-						</div>
+					<button className="video-action-btn">
+						<img src={dislikeIcon} alt="Dislike" />
 						<span className="video-action-btn__text">435k</span>
 					</button>
 
-					<button className="video-action-btn video-action-btn--share">
-						<div className="video-action-btn__icon">
-							<img src={shareIcon} alt="Share" />
-						</div>
-						<span className="video-action-btn__text">Share</span>
+					<button className="video-action-btn">
+						<img src={shareIcon} alt="Share" />
+						<span>Share</span>
 					</button>
 
 					<button className="video-action-btn--more">

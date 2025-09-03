@@ -1,9 +1,9 @@
 /* Desktop Navbar BEM Styles */
 .desktop-navbar {
 	display: flex;
-	padding: var(--spacing-lg) var(--spacing-xl);
 	align-items: center;
 	justify-content: space-between;
+	padding: var(--spacing-lg) var(--spacing-xl);
 }
 
 .desktop-navbar__left {
