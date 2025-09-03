@@ -1,4 +1,4 @@
-import "./VideoPlayer.css";
+import styles from "./VideoPlayer.module.css";
 import {
 	videoCover,
 	likeIcon,
@@ -7,8 +7,8 @@ import {
 	moreIcon,
 	pauseIcon,
 	nextIcon,
-	volumeIcon,
-	volumeIcon2,
+	DesktopvolumeIcon,
+	MobilevolumeIcon,
 	ccIcon,
 	settingsIcon,
 	sizeIcon,
@@ -17,53 +17,53 @@ import {
 
 export default function VideoPlayer() {
 	return (
-		<div className="video-player">
-			<div className="video-player__container">
+		<div className={styles.videoPlayer}>
+			<div className={styles.videoPlayerContainer}>
 				{/* Video Cover */}
-				<div className="video-player__cover">
+				<div className={styles.videoPlayerCover}>
 					<img src={videoCover} alt="Video thumbnail" />
 				</div>
 
 				{/* Desktop Video Controls Overlay */}
-				<div className="video-player__controls">
+				<div className={styles.videoPlayerControls}>
 					{/* Time Display */}
-					<div className="video-player__time-display">
+					<div className={styles.videoPlayerTimeDisplay}>
 						<span>1:34</span>
 						<span>19:00</span>
 					</div>
 
 					{/* Progress Bar */}
-					<div className="video-player__progress-bar">
-						<div className="video-player__progress-fill"></div>
+					<div className={styles.videoPlayerProgressBar}>
+						<div className={styles.videoPlayerProgressFill}></div>
 					</div>
 
 					{/* Bottom Controls */}
-					<div className="video-player__bottom-controls">
+					<div className={styles.videoPlayerBottomControls}>
 						{/* Left Controls */}
-						<div className="video-player__left-controls">
-							<button className="video-player__pause-btn" aria-label="Pause">
+						<div className={styles.videoPlayerLeftControls}>
+							<button className={styles.videoPlayerPauseBtn} aria-label="Pause">
 								<img src={pauseIcon} alt="Pause" />
 							</button>
-							<button className="video-player__next-btn" aria-label="Skip Forward">
+							<button className={styles.videoPlayerNextBtn} aria-label="Skip Forward">
 								<img src={nextIcon} alt="Next" />
 							</button>
-							<button className="video-player__volume-btn" aria-label="Volume">
-								<img src={volumeIcon} alt="Volume" />
+							<button className={styles.videoPlayerVolumeBtn} aria-label="Volume">
+								<img src={DesktopvolumeIcon} alt="Volume" />
 							</button>
 						</div>
 
 						{/* Right Controls */}
-						<div className="video-player__right-controls">
-							<button className="video-player__subtitles-btn" aria-label="Closed Captions">
+						<div className={styles.videoPlayerRightControls}>
+							<button className={styles.videoPlayerSubtitlesBtn} aria-label="Closed Captions">
 								<img src={ccIcon} alt="Closed Captions" />
 							</button>
-							<button className="video-player__settings-btn" aria-label="Settings">
+							<button className={styles.videoPlayerSettingsBtn} aria-label="Settings">
 								<img src={settingsIcon} alt="Settings" />
 							</button>
-							<button className="video-player__size-btn" aria-label="Picture-in-Picture">
+							<button className={styles.videoPlayerSizeBtn} aria-label="Picture-in-Picture">
 								<img src={sizeIcon} alt="Size" />
 							</button>
-							<button className="video-player__fullscreen-btn" aria-label="Full Screen">
+							<button className={styles.videoPlayerFullscreenBtn} aria-label="Full Screen">
 								<img src={fullscreenIcon} alt="Full Screen" />
 							</button>
 						</div>
@@ -71,46 +71,46 @@ export default function VideoPlayer() {
 				</div>
 
 				{/* Mobile Video Controls Overlay */}
-				<div className="video-player__mobile-controls">
-					<button className="video-player__mobile-btn" aria-label="Pause">
+				<div className={styles.videoPlayerMobileControls}>
+					<button className={styles.videoPlayerMobileBtn} aria-label="Pause">
 						<img src={pauseIcon} alt="Pause" />
 					</button>
 					<span>1:34</span>
-					<div className="video-player__mobile-progress-bar">
-						<div className="video-player__mobile-progress-fill"></div>
+					<div className={styles.videoPlayerMobileProgressBar}>
+						<div className={styles.videoPlayerMobileProgressFill}></div>
 					</div>
 					<span>-10:00</span>
-					<button className="video-player__mobile-btn" aria-label="Volume">
-						<img src={volumeIcon2} alt="Volume" />
+					<button className={styles.videoPlayerMobileBtn} aria-label="Volume">
+						<img src={MobilevolumeIcon} alt="Volume" />
 					</button>
 				</div>
 			</div>
 
 			{/* Video Info */}
-			<section className="video-player__info">
-				<div className="video-player__info-title">
-					<h1 className="video-player__title">Dude You Re Getting A Telescope</h1>
-					<p className="video-player__views">123k views</p>
+			<section className={styles.videoPlayerInfo}>
+				<div className={styles.videoPlayerInfoTitle}>
+					<h1 className={styles.videoPlayerTitle}>Dude You Re Getting A Telescope</h1>
+					<p className={styles.videoPlayerViews}>123k views</p>
 				</div>
 
 				{/* Action Buttons */}
-				<div className="video-actions">
-					<button className="video-action-btn">
+				<div className={styles.videoActions}>
+					<button className={styles.videoActionBtn}>
 						<img src={likeIcon} alt="Like" />
-						<span className="video-action-btn__text">123k</span>
+						<span className={styles.videoActionBtnText}>123k</span>
 					</button>
 
-					<button className="video-action-btn">
+					<button className={styles.videoActionBtn}>
 						<img src={dislikeIcon} alt="Dislike" />
-						<span className="video-action-btn__text">435k</span>
+						<span className={styles.videoActionBtnText}>435k</span>
 					</button>
 
-					<button className="video-action-btn">
+					<button className={styles.videoActionBtn}>
 						<img src={shareIcon} alt="Share" />
 						<span>Share</span>
 					</button>
 
-					<button className="video-action-btn--more">
+					<button className={styles.videoActionBtnMore}>
 						<img src={moreIcon} alt="More" />
 					</button>
 				</div>

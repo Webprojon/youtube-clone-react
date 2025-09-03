@@ -1,37 +1,32 @@
 /* Desktop Navbar BEM Styles */
-.desktop-navbar {
+.desktopNavbar {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: var(--spacing-lg) var(--spacing-xl);
 }
 
-.desktop-navbar__left {
+.desktopNavbarLeft {
 	display: flex;
 	align-items: center;
 }
 
-.desktop-navbar__menu-btn {
+.desktopNavbarMenuBtn {
 	width: 20px;
 	height: 17px;
 }
 
-.desktop-navbar__logo {
+.desktopNavbarLogo {
 	width: 116px;
 	height: 25px;
 	margin: 0 52px 0 25px;
 }
 
-.desktop-navbar__search-form {
-	display: flex;
-	align-items: center;
+.desktopNavbarSearchForm {
 	width: 830px;
-	height: 44px;
-	border-radius: var(--radius-xl);
-	background: var(--color-input-bg);
 }
 
-.desktop-navbar__search-input {
+.desktopNavbarSearchInput {
 	flex: 1;
 	border: none;
 	outline: none;
@@ -41,36 +36,36 @@
 	color: var(--color-text-light);
 }
 
-.desktop-navbar__search-input::placeholder {
+.desktopNavbarSearchInput::placeholder {
 	color: var(--color-text-light);
 }
 
-.desktop-navbar__search-btn {
+.desktopNavbarSearchBtn {
 	width: 18.21px;
 	height: 18.21px;
 	margin-right: 13px;
 }
 
-.desktop-navbar__right {
+.desktopNavbarRight {
 	gap: 29px;
 	display: flex;
 	align-items: center;
 }
 
-.desktop-navbar__right button {
+.desktopNavbarRight button {
 	padding: 0 var(--spacing-sm);
 }
 
-.desktop-navbar__icon {
+.desktopNavbarIcon {
 	width: 27px;
 	height: 20px;
 }
 
-.desktop-navbar__notifications-btn {
+.desktopNavbarNotificationsBtn {
 	position: relative;
 }
 
-.desktop-navbar__notification-count {
+.desktopNavbarNotificationCount {
 	position: absolute;
 	top: -8px;
 	right: 5px;
@@ -86,31 +81,41 @@
 	background: var(--color-red);
 }
 
-.desktop-navbar__avatar {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
+.desktopNavbarAvatar {
+	width: 40px !important;
+	height: 40px !important;
+	border-radius: 50% !important;
+	overflow: hidden;
+}
+
+.desktopNavbarAvatar img,
+.desktopNavbarAvatar .icon {
+	width: 40px !important;
+	height: 40px !important;
+	border-radius: 50% !important;
+	object-fit: cover !important;
+	display: block;
 }
 
 /* Desktop Responsive Design */
 @media (max-width: 1200px) {
-	.desktop-navbar__right {
+	.desktopNavbarRight {
 		gap: 12px;
 	}
 
-	.desktop-navbar__search-form {
+	.desktopNavbarSearchForm {
 		width: 520px;
 	}
 }
 
 @media (max-width: 900px) {
-	.desktop-navbar__search-form {
+	.desktopNavbarSearchForm {
 		width: 300px;
 	}
 }
 
 @media (max-width: 700px) {
-	.desktop-navbar {
+	.desktopNavbar {
 		display: none;
 	}
 }

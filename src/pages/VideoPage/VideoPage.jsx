@@ -1,5 +1,5 @@
-import "./VideoPage.css";
-import { recommendedVideos } from "./../../contants/data";
+import styles from "./VideoPage.module.css";
+import { RECOMMENDED_VIDEOS } from "../../constants/constants";
 import VideoCard from "../../components/VideoCard/VideoCard";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
@@ -11,27 +11,27 @@ export default function VideoPage() {
 
 	return (
 		/* Main Container */
-		<div className="video-page">
-			<div className="video-page__main">
+		<div className={styles.videoPage}>
+			<div className={styles.videoPageMain}>
 				<VideoPlayer />
 				<VideoDescription />
 			</div>
 
 			{/* Sidebar Container */}
-			<div className="video-page__sidebar">
-				<div className="next-section">
-					<div className="next-section__header">
-						<h2 className="next-section__title">Next</h2>
-						<div className="next-section__autoplay">
-							<span className="autoplay-label">AUTOPLAY</span>
-							<div className="autoplay-toggle">
-								<div className="autoplay-toggle__switch"></div>
+			<div className={styles.videoPageSidebar}>
+				<div className={styles.nextSection}>
+					<div className={styles.nextSectionHeader}>
+						<h2 className={styles.nextSectionTitle}>Next</h2>
+						<div className={styles.nextSectionAutoplay}>
+							<span className={styles.autoplayLabel}>AUTOPLAY</span>
+							<div className={styles.autoplayToggle}>
+								<div className={styles.autoplayToggleSwitch}></div>
 							</div>
 						</div>
 					</div>
 
-					<div className="next-section__videos">
-						{recommendedVideos.map(({ id, thumbnail, title, views, channel, duration }) => (
+					<div className={styles.nextSectionVideos}>
+						{RECOMMENDED_VIDEOS.map(({ id, thumbnail, title, views, channel, duration }) => (
 							<VideoCard
 								key={id}
 								thumbnail={thumbnail}
