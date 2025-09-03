@@ -1,11 +1,5 @@
 import "./DesktopNavbar.css";
-import menuIcon from "../../assets/icons/menu-icon.svg";
-import searchIcon from "../../assets/icons/search-icon.svg";
-import videoCameraIcon from "../../assets/icons/video-camera-icon.svg";
-import sixDotsIcon from "../../assets/icons/six-dots-icon.svg";
-import bellIcon from "../../assets/icons/bell-icon.svg";
-import logo from "../../assets/images/youtube-logo.png";
-import avatarImg from "../../assets/images/user-avatar.png";
+import { menuIcon, searchIcon, videoCameraIcon, sixDotsIcon, bellIcon, logo, avatarImg } from "../../assets";
 
 export default function DesktopNavbar() {
 	return (

@@ -1,4 +1,3 @@
-import React from "react";
 import "./VideoCard.css";
 
 const VideoCard = ({ thumbnail, title, views, channel, duration, onClick }) => {

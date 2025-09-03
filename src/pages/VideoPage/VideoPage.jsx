@@ -1,8 +1,8 @@
 import "./VideoPage.css";
-import VideoPlayer from "../../components/videoPlayer/VideoPlayer";
-import VideoDescription from "../../components/VideoDescription/VideoDescription";
-import VideoCard from "../../components/VideoCard/VideoCard";
 import { recommendedVideos } from "./../../contants/data";
+import VideoCard from "../../components/VideoCard/VideoCard";
+import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+import VideoDescription from "../../components/VideoDescription/VideoDescription";
 
 export default function VideoPage() {
 	const handleVideoClick = (videoId) => {

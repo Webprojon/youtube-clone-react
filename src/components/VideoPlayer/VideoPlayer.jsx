@@ -1,17 +1,19 @@
 import "./VideoPlayer.css";
-import videoCover from "../../assets/images/video-cover-main.png";
-import likeIcon from "../../assets/icons/like-icon.svg";
-import dislikeIcon from "../../assets/icons/dislike-icon.svg";
-import shareIcon from "../../assets/icons/share-icon.svg";
-import moreIcon from "../../assets/icons/more-icon.svg";
-import pauseIcon from "../../assets/icons/pause-icon.png";
-import nextIcon from "../../assets/icons/next-icon.png";
-import volumeIcon from "../../assets/icons/volume-icon.png";
-import volumeIcon2 from "../../assets/icons/volume.svg";
-import ccIcon from "../../assets/icons/subtitles-icon.png";
-import settingsIcon from "../../assets/icons/settings-icon.png";
-import sizeIcon from "../../assets/icons/size-icon.png";
-import fullscreenIcon from "../../assets/icons/full-screen-icon.png";
+import {
+	videoCover,
+	likeIcon,
+	dislikeIcon,
+	shareIcon,
+	moreIcon,
+	pauseIcon,
+	nextIcon,
+	volumeIcon,
+	volumeIcon2,
+	ccIcon,
+	settingsIcon,
+	sizeIcon,
+	fullscreenIcon,
+} from "../../assets";
 
 export default function VideoPlayer() {
 	return (

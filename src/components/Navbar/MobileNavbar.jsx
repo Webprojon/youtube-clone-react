@@ -1,11 +1,6 @@
 import "./MobileNavbar.css";
-import searchIcon from "../../assets/icons/search-icon.svg";
-import threeDotsIcon from "../../assets/icons/three-dots-icon.png";
-import homeIcon from "../../assets/icons/home-icon.svg";
-import trendingIcon from "../../assets/icons/trending-icon.svg";
-import subscriptionsIcon from "../../assets/icons/subscriptions-icon.svg";
-import libraryIcon from "../../assets/icons/library-icon.svg";
-import logo from "../../assets/images/youtube-logo.png";
+
+import { searchIcon, threeDotsIcon, homeIcon, trendingIcon, subscriptionsIcon, libraryIcon, logo } from "../../assets";
 
 export default function MobileNavbar() {
 	return (
