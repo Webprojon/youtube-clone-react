@@ -1,25 +1,25 @@
 .video-description {
 	margin: 0 auto;
-	padding: 0;
-	margin-top: 20px;
+	padding-top: 20px;
 	background: var(--color-bg);
+	border-top: 1px solid #d8d8d8;
 }
 
 /* Channel Information */
 .video-description__channel-info {
-	display: flex;
-	align-items: flex-start;
 	gap: 12px;
-	margin-bottom: var(--spacing-lg);
+	display: flex;
 	position: relative;
+	align-items: flex-start;
+	margin-bottom: var(--spacing-lg);
 }
 
 .video-description__channel-avatar {
 	width: 80px;
 	height: 80px;
-	border-radius: 50%;
-	overflow: hidden;
 	flex-shrink: 0;
+	overflow: hidden;
+	border-radius: 50%;
 }
 
 .video-description__channel-avatar img {
@@ -30,45 +30,46 @@
 
 .video-description__channel-details {
 	flex: 1;
-	padding-top: var(--spacing-sm);
 }
 
 .video-description__channel-name {
-	font-size: var(--font-size-xl);
 	font-weight: bold;
 	color: var(--color-text);
+	font-size: var(--font-size-xl);
 	margin: 0 0 var(--spacing-xs) 0;
 }
 
 .video-description__publish-date {
-	font-size: var(--font-size-sm-md);
 	font-weight: 400;
-	line-height: 1.255;
 	color: var(--color-text-muted);
-	margin: 0;
+	font-size: var(--font-size-sm-md);
+}
+
+.video-description__mobile-publish-date {
+	display: none;
+	font-weight: 400;
+	color: var(--color-text-muted);
+	font-size: var(--font-size-sm-md);
 }
 
 /* Video Description Content */
 .video-description__text {
-	font-size: var(--font-size-base);
-	font-weight: 400;
-	color: var(--color-black);
 	opacity: 0.6;
-	margin-bottom: 15px;
+	font-weight: 400;
 	max-width: 820px;
+	margin-bottom: 15px;
+	color: var(--color-black);
+	font-size: var(--font-size-base);
 }
 
 .video-description__show-more {
 	background: none;
-	font-size: var(--font-size-lg);
 	font-weight: 400;
+	font-size: var(--font-size-lg);
 	color: var(--color-text-muted);
 }
 
 .video-description__subscribe-btn {
-	position: absolute;
-	right: 0;
-	top: 20px;
 	width: 154px;
 	height: 40px;
 	font-weight: 400;
@@ -78,43 +79,14 @@
 	font-size: var(--font-size-base);
 }
 
+.video-description__mobile-subscribe-btn {
+	display: none;
+	color: var(--color-red);
+	font-size: var(--font-size-base);
+}
+
 /* Responsive Design */
-@media (max-width: 1600px) {
-	.video-description {
-		max-width: 100%;
-	}
-}
-
-@media (max-width: 1200px) {
-	.video-description {
-		max-width: 800px;
-	}
-
-	.video-description__content {
-		margin-left: 80px;
-	}
-
-	.video-description__text {
-		max-width: 700px;
-	}
-
-	.video-description__subscribe-btn {
-		position: static;
-		margin-top: 10px;
-	}
-}
-
 @media (max-width: 768px) {
-	.video-description {
-		max-width: 100%;
-		padding: 0 20px;
-	}
-
-	.video-description__channel-info {
-		gap: 10px;
-		margin-bottom: 15px;
-	}
-
 	.video-description__channel-avatar {
 		width: 60px;
 		height: 60px;
@@ -128,28 +100,45 @@
 		font-size: var(--font-size-sm);
 	}
 
-	.video-description__content {
-		margin-left: 0;
-	}
-
 	.video-description__text {
 		font-size: 15px;
-		max-width: 100%;
 	}
 
 	.video-description__show-more {
-		font-size: var(--font-size-lg);
+		font-size: var(--font-size-md);
 	}
 }
 
 @media (max-width: 480px) {
 	.video-description {
-		padding: 0 15px;
+		margin: 0 16px;
+		padding: 16px 0 4px 0;
+		border-bottom: 1px solid #d8d8d8;
+	}
+
+	.video-description__content {
+		display: none;
+	}
+
+	.video-description__mobile-publish-date {
+		display: flex;
+	}
+
+	.video-description__publish-date {
+		display: none;
 	}
 
 	.video-description__channel-info {
-		gap: var(--spacing-sm);
+		align-items: center;
 		margin-bottom: 12px;
+	}
+
+	.video-description__subscribe-btn {
+		display: none;
+	}
+
+	.video-description__mobile-subscribe-btn {
+		display: flex;
 	}
 
 	.video-description__channel-avatar {
@@ -162,15 +151,6 @@
 	}
 
 	.video-description__publish-date {
-		font-size: 11px;
-	}
-
-	.video-description__text {
-		font-size: var(--font-size-sm);
-		line-height: 1.4;
-	}
-
-	.video-description__show-more {
-		font-size: var(--font-size-base);
+		font-size: 12px;
 	}
 }

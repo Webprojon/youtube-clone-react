@@ -12,8 +12,10 @@ export default function VideoDescription() {
 				<div className="video-description__channel-details">
 					<h2 className="video-description__channel-name">Food & Drink</h2>
 					<p className="video-description__publish-date">Published on 14 Jun 2019</p>
+					<p className="video-description__mobile-publish-date">245K subscribed</p>
 				</div>
 				<button className="video-description__subscribe-btn">Subscribe 2.3m</button>
+				<button className="video-description__mobile-subscribe-btn">Subscribe</button>
 			</div>
 
 			{/* Video Description */}
