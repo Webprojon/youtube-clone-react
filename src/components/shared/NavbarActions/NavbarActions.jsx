@@ -1,20 +1,23 @@
-import { IconButton, NotificationButton } from "../index";
+import { IconButton } from "../index";
+import { avatarImg } from "../../../assets";
+import styles from "./NavbarActions.module.css";
 
-const NavbarActions = ({ actions = [], className = "", iconClassName = "", ...props }) => {
+const NavbarActions = ({ actions = [], className = "", iconClassName = "", showUserProfile = false, userProfileClassName = "", ...props }) => {
 	return (
 		<div className={className} {...props}>
 			{actions.map((action) => {
 				if (action.hasNotification) {
 					return (
-						<NotificationButton
+						<IconButton
 							key={action.id}
 							icon={action.icon}
 							alt={action.alt}
 							ariaLabel={action.ariaLabel}
-							count={action.count || 0}
-							className={action.className}
+							className={`${styles.notificationButton} ${action.className}`}
 							iconClassName={iconClassName}
-						/>
+						>
+							{action.count > 0 && <span className={styles.notificationCount}>{action.count}</span>}
+						</IconButton>
 					);
 				}
 
@@ -29,6 +32,11 @@ const NavbarActions = ({ actions = [], className = "", iconClassName = "", ...pr
 					/>
 				);
 			})}
+			{showUserProfile && (
+				<div className={`${styles.userProfile} ${userProfileClassName}`}>
+					<img src={avatarImg} alt="User profile" className={styles.userProfileImage} />
+				</div>
+			)}
 		</div>
 	);
 };

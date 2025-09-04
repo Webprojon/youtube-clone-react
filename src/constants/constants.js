@@ -1,4 +1,4 @@
-import { homeIcon, trendingIcon, subscriptionsIcon, libraryIcon, videoCameraIcon, sixDotsIcon, bellIcon, avatarImg } from "../assets";
+import { homeIcon, trendingIcon, subscriptionsIcon, libraryIcon, videoCameraIcon, sixDotsIcon, bellIcon } from "../assets";
 
 import { videoThumbnail1, videoThumbnail2, videoThumbnail3, videoThumbnail4 } from "../assets";
 
@@ -14,7 +14,6 @@ export const DESKTOP_NAVBAR_ACTIONS = [
 	{ id: "upload", icon: videoCameraIcon, alt: "upload video", ariaLabel: "Upload video" },
 	{ id: "apps", icon: sixDotsIcon, alt: "apps", ariaLabel: "YouTube apps" },
 	{ id: "notifications", icon: bellIcon, alt: "notifications", ariaLabel: "Notifications", hasNotification: true, count: 3 },
-	{ id: "profile", icon: avatarImg, alt: "Your profile picture", ariaLabel: "User profile", className: "desktopNavbarAvatar" },
 ];
 
 // Video data constants

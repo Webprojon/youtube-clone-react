@@ -17,3 +17,17 @@
 	color: var(--color-bg);
 	background: var(--color-red);
 }
+
+.userProfile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.userProfileImage {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+}
