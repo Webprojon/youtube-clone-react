@@ -1,0 +1,33 @@
+.notificationButton {
+	position: relative;
+}
+
+.notificationCount {
+	position: absolute;
+	top: -8px;
+	right: 5px;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-bg);
+	background: var(--color-red);
+}
+
+.userProfile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.userProfileImage {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+}

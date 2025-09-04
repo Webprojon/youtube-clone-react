@@ -1,3 +1,11 @@
+import Navbar from "./components/Navbar/Navbar";
+import VideoPage from "./pages/VideoPage/VideoPage";
+
 export default function App() {
-	return <div>app</div>;
+	return (
+		<>
+			<Navbar />
+			<VideoPage />
+		</>
+	);
 }

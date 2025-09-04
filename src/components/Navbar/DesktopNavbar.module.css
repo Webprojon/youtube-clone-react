@@ -1,0 +1,92 @@
+.desktopNavbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.desktopNavbarLeft {
+	display: flex;
+	align-items: center;
+}
+
+.desktopNavbarMenuBtn {
+	width: 20px;
+	height: 17px;
+}
+
+.desktopNavbarLogo {
+	width: 116px;
+	height: 25px;
+	margin: 0 52px 0 25px;
+}
+
+.searchForm {
+	display: flex;
+	align-items: center;
+	height: 44px;
+	border-radius: var(--radius-xl);
+	background: var(--color-input-bg);
+}
+
+.desktopNavbarSearchForm {
+	width: 830px;
+}
+
+.searchInput {
+	flex: 1;
+	border: none;
+	outline: none;
+	font-size: var(--font-size-base);
+	padding: 12px 23px;
+	background: transparent;
+	color: var(--color-text-light);
+}
+
+.searchInput::placeholder {
+	color: var(--color-text-light);
+}
+
+.searchIcon {
+	width: 18.21px;
+	height: 18.21px;
+	margin-right: 13px;
+}
+
+.desktopNavbarRight {
+	gap: 29px;
+	display: flex;
+	align-items: center;
+}
+
+.desktopNavbarRight button {
+	padding: 0 var(--spacing-sm);
+}
+
+.desktopNavbarIcon {
+	width: 27px;
+	height: 20px;
+}
+
+/* Desktop Responsive Design */
+@media (max-width: 1200px) {
+	.desktopNavbarRight {
+		gap: 12px;
+	}
+
+	.desktopNavbarSearchForm {
+		width: 520px;
+	}
+}
+
+@media (max-width: 900px) {
+	.desktopNavbarSearchForm {
+		width: 300px;
+	}
+}
+
+@media (max-width: 700px) {
+	.desktopNavbar {
+		display: none;
+	}
+}
